@@ -19,14 +19,17 @@
     </ul>
 
     <h2>Results</h2>
+    <?php foreach ($results as $round => $details) { ?>
     <ul>
-        <li>Player A flipped <?php echo $playerA ?>
+        <li>Round # <?php echo $round+1 ?>
+        <li>Player A flipped <?php echo $details['playerA'] ?>
         </li>
-        <li>Player B defaults to <?php echo $playerB ?>
+        <li>Player B defaults to <?php echo $details['playerB'] ?>
         </li>
-        <li>The coin landed on <?php echo $flip ?>
+        <li>The coin landed on <?php echo $details['flip'] ?>
         </li>
-        <li>The winner is <?php echo $winner ?>
+        <li>The winner is <?php echo $details['winner'] ?>
         </li>
     </ul>
+    <?php } ?>
 </body>
