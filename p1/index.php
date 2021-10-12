@@ -1,30 +1,20 @@
 <?php
 
-$coin = ['heads', 'tails'];
-
-// Play 10 rounds
+# Play 10 rounds
 for ($i = 0; $i < 10; $i++) {
+    
+    # Flip the coin for Player A
+    $playerA = flipCoin();
 
-    // Flip the coin for Player A
-    $playerA = $coin[rand(0, 1)];
+    # For Player B default to whatever side is left
+    $playerB = ($playerA == 'heads') ? 'tails' : 'heads';
 
-    // For Player B default to whatever side is left
-    if ($playerA == 'heads') {
-        $playerB = 'tails';
-    } else {
-        $playerB = 'heads';
-    }
+    # Flip to pick the winning side
+    $flip = flipCoin();
 
-    // Flip to pick the winning side
-    $flip = $coin[rand(0, 1)];
-
-    // Decide the winner
-    if ($playerA == $flip) {
-        $winner = 'Player A';
-    } else {
-        $winner = 'Player B';
-    }
-
+    # Decide the winner
+    $winner = ($playerA == $flip) ? 'Player A' : 'Player B';
+    
     # Accumulate the results for the view
     $results[] = [
         'playerA' => $playerA,
@@ -35,3 +25,9 @@ for ($i = 0; $i < 10; $i++) {
 }
 
 require 'index-view.php';
+
+function flipCoin()
+{
+    $coin = ['heads', 'tails'];
+    return $coin[rand(0, 1)];
+}
