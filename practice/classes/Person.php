@@ -2,10 +2,12 @@
 
 class Person
 {
+    # properties
     public $firstName;
     public $lastName;
     public $age;
 
+    # methods
     public function __construct(string $firstName, string $lastName, int $age)
     {
         $this->firstName = $firstName;
@@ -15,11 +17,17 @@ class Person
 
     public function getFullName()
     {
-        return $this->firstName.' '.$this->lastName;
+        return $this->firstName . ' ' . $this->lastName;
     }
 
     public function getClassification()
     {
+        // if($this->age >= 18) {
+        //     return 'adult';
+        // } else {
+        //     return 'minor';
+        // }
+
         return ($this->age >= 18) ? 'adult' : 'minor';
     }
 }

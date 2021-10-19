@@ -1,7 +1,7 @@
 <?php
 
-// Solving RPS using a math formula
-// Original source: https://therenegadecoder.com/code/rock-paper-scissors-using-modular-arithmetic/
+# Solving RPS using a math formula
+# Original source: https://therenegadecoder.com/code/rock-paper-scissors-using-modular-arithmetic/
 
 $moves = ['rock', 'paper', 'scissors'];
 
