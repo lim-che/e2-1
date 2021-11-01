@@ -1,9 +1,7 @@
 <?php
 session_start();
 
-require __DIR__.'/vendor/autoload.php';
-
-$myGame = new App\MyGame();
+//require __DIR__.'/vendor/autoload.php';
 
 # Define array of moves - used in the view to display each move
 $moves = ['rock', 'paper', 'scissors'];

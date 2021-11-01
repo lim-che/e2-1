@@ -58,10 +58,10 @@
             <?php foreach ($moves as $move) { ?>
             <input type='radio'
                    name='player'
-                   value='<?=$move ?>'
-                   id='<?=$move ?>'
+                   value='<?php echo $move ?>'
+                   id='<?php echo $move ?>'
                    <?php echo ($lastGame and $move == $lastGame['player']) ? 'checked' : '' ?>>
-            <label for='<?= $move ?>'><?= ucfirst($move) ?></label>
+            <label for='<?php echo $move ?>'><?php echo ucfirst($move) ?></label>
             <?php } ?>
 
             <button type='submit'>Shoot!</button>
@@ -72,9 +72,9 @@
         <?php if ($lastGame) { ?>
         <h2>Results</h2>
         <ul>
-            <li>You chose <strong><?= $lastGame['player'] ?></strong>
+            <li>You chose <strong><?php echo $lastGame['player'] ?></strong>
             </li>
-            <li>The computer chose <strong><?= $lastGame['computer'] ?></strong>
+            <li>The computer chose <strong><?php echo $lastGame['computer'] ?></strong>
             </li>
             <li>
                 <?php if ($lastGame['outcome'] == 'lost') { ?>
@@ -95,10 +95,10 @@
         <h2>Game history</h2>
         <?php foreach ($recentGames as $game) { ?>
         <ul>
-            <li>Player chose: <?= $game['player'] ?>
-            <li>Computer chose: <?= $game['computer'] ?>
-            <li>Outcome: <?= $game['outcome'] ?>
-            <li>Played at: <?= $game['timestamp'] ?>
+            <li>Player chose: <?php echo $game['player'] ?>
+            <li>Computer chose: <?php echo $game['computer'] ?>
+            <li>Outcome: <?php echo $game['outcome'] ?>
+            <li>Played at: <?php echo $game['timestamp'] ?>
         </ul>
         <?php } ?>
         <?php } ?>

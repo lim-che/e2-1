@@ -3,10 +3,9 @@
 require __DIR__.'/vendor/autoload.php';
 
 use RPS\Game;
+use App\MyGame;
 
-//use App\Debug;
-
-# Get the player's move from the form data
+# Get the player’s move from the form data
 $player = $_POST['player'];
 
 # Initialize a new Game object
@@ -19,4 +18,4 @@ $_SESSION['results'] = [
 ];
 
 # Send the user back to the index page where the results will be extracted/displayed
-header('Location: index.php');
+//header('Location: index.php');
