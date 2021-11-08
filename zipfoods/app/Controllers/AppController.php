@@ -21,4 +21,9 @@ class AppController extends Controller
             'email' => 'support@zipfoods.com'
         ]);
     }
+
+    public function about()
+    {
+        return $this->app->view('about');
+    }
 }
