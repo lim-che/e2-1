@@ -17,7 +17,7 @@ class AppController extends Controller
 
     public function contact()
     {
-        return $this->app->view('test/contact', [
+        return $this->app->view('contact', [
             'email' => 'support@zipfoods.com'
         ]);
     }
