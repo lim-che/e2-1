@@ -1,3 +1,15 @@
-<h1>About</h1>
+@extends('templates/master')
 
-<p>ZipFoods is your one-stop-shop for convenient online grocery shopping in the greater Boston area.</p>
+@section('title')
+    About
+@endsection
+
+@section('head')
+    <link href='/css/about.css' rel='stylesheet'>
+@endsection
+
+@section('content')
+    <h2>About</h2>
+
+    <p>ZipFoods is your one-stop-shop for convenient online grocery shopping in the greater Boston area.</p>
+@endsection
